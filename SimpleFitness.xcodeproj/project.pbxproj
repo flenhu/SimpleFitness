@@ -14,6 +14,10 @@
 		0123DB772C000D8B00B3F48E /* SimpleFitnessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123DB762C000D8B00B3F48E /* SimpleFitnessTests.swift */; };
 		0123DB812C000D8B00B3F48E /* SimpleFitnessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123DB802C000D8B00B3F48E /* SimpleFitnessUITests.swift */; };
 		0123DB832C000D8B00B3F48E /* SimpleFitnessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123DB822C000D8B00B3F48E /* SimpleFitnessUITestsLaunchTests.swift */; };
+		0123DB962C000EA800B3F48E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123DB952C000EA800B3F48E /* HomeView.swift */; };
+		0123DB982C000F2700B3F48E /* SimpleFitnessTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123DB972C000F2700B3F48E /* SimpleFitnessTabView.swift */; };
+		0123DB9A2C00103800B3F48E /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123DB992C00103800B3F48E /* ActivityCard.swift */; };
+		0123DB9C2C00144C00B3F48E /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0123DB9B2C00144C00B3F48E /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		0123DB7C2C000D8B00B3F48E /* SimpleFitnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleFitnessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0123DB802C000D8B00B3F48E /* SimpleFitnessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFitnessUITests.swift; sourceTree = "<group>"; };
 		0123DB822C000D8B00B3F48E /* SimpleFitnessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFitnessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0123DB952C000EA800B3F48E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0123DB972C000F2700B3F48E /* SimpleFitnessTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFitnessTabView.swift; sourceTree = "<group>"; };
+		0123DB992C00103800B3F48E /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		0123DB9B2C00144C00B3F48E /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		0123DB9D2C0015E600B3F48E /* SimpleFitness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleFitness.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +103,14 @@
 		0123DB642C000D8900B3F48E /* SimpleFitness */ = {
 			isa = PBXGroup;
 			children = (
+				0123DB9D2C0015E600B3F48E /* SimpleFitness.entitlements */,
 				0123DB652C000D8900B3F48E /* SimpleFitnessApp.swift */,
 				0123DB672C000D8900B3F48E /* ContentView.swift */,
 				0123DB692C000D8B00B3F48E /* Assets.xcassets */,
+				0123DB952C000EA800B3F48E /* HomeView.swift */,
+				0123DB9B2C00144C00B3F48E /* HealthManager.swift */,
+				0123DB992C00103800B3F48E /* ActivityCard.swift */,
+				0123DB972C000F2700B3F48E /* SimpleFitnessTabView.swift */,
 				0123DB6B2C000D8B00B3F48E /* Preview Content */,
 			);
 			path = SimpleFitness;
@@ -258,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0123DB682C000D8900B3F48E /* ContentView.swift in Sources */,
+				0123DB9C2C00144C00B3F48E /* HealthManager.swift in Sources */,
+				0123DB982C000F2700B3F48E /* SimpleFitnessTabView.swift in Sources */,
+				0123DB962C000EA800B3F48E /* HomeView.swift in Sources */,
 				0123DB662C000D8900B3F48E /* SimpleFitnessApp.swift in Sources */,
+				0123DB9A2C00103800B3F48E /* ActivityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,12 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleFitness/SimpleFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleFitness/Preview Content\"";
 				DEVELOPMENT_TEAM = G9NJD5FU9R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Access for step count for the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,12 +468,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SimpleFitness/SimpleFitness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleFitness/Preview Content\"";
 				DEVELOPMENT_TEAM = G9NJD5FU9R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Access for step count for the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
